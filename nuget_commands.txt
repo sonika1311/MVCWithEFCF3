@@ -1,3 +1,21 @@
 install Entity Framework
 ----------------------------------
 Install-Package EntityFramework
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+Enable Automatic Migrations
+----------------------------
+PM> Enable-Migrations -EnableAutomaticMigration:$true
+System.ArgumentNullException: Value cannot be null.
+Parameter name: type
+   at System.Activator.CreateInstance(Type type, BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes)
+   at System.Activator.CreateInstance(Type type, Object[] args)
+   at System.Data.Entity.Migrations.Extensions.ProjectExtensions.GetProjectTypes(Project project, Int32 shellVersion)
+   at System.Data.Entity.Migrations.Extensions.ProjectExtensions.IsWebSiteProject(Project project)
+   at System.Data.Entity.Migrations.Extensions.ProjectExtensions.GetTargetDir(Project project)
+   at System.Data.Entity.Migrations.MigrationsDomainCommand.GetFacade(String configurationTypeName, Boolean useContextWorkingDirectory)
+   at System.Data.Entity.Migrations.EnableMigrationsCommand.FindContextToEnable(String contextTypeName)
+   at System.Data.Entity.Migrations.EnableMigrationsCommand.<>c__DisplayClass2.<.ctor>b__0()
+   at System.Data.Entity.Migrations.MigrationsDomainCommand.Execute(Action command)
+Value cannot be null.
+Parameter name: type

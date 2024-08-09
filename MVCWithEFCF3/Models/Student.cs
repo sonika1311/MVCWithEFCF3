@@ -9,5 +9,6 @@ namespace MVCWithEFCF3.Models
     {
         public int StudentId { get; set; }
         public string Name { get; set; }
+        public bool Status { get; set; }
     }
 }

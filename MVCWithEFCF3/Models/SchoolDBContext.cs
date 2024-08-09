@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data.Entity;
+using MVCWithEFCF3.Migrations;
 
 namespace MVCWithEFCF3.Models
 {
@@ -10,7 +11,7 @@ namespace MVCWithEFCF3.Models
     {
         public SchoolDBContext() : base("ConStr")
         {
-
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<SchoolDBContext, Configuration>());
         }
         public DbSet<Student> Students
         {
